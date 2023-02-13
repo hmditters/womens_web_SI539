@@ -13,15 +13,16 @@ img{
     padding: 10px;
     margin: 5px;
     border: outset #4F6EB0 10px;
+    border-radius: 30px;
 }
 
-img:hover{
-    color:blue
-}
+img:nth-of-type(even):hover {
+    transform: scale(1.1);
+  }
 
 li{
     display: inline-block;
-    margin: 5 px;
+    margin: 5px;
 }
 
 .active{
@@ -32,4 +33,15 @@ li{
 p{
     display: inline-block;
     text-align: left;
+}
+
+dt{
+    margin: 0px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+dt{
+    margin: 10px;
+    padding: 5px;
 }
