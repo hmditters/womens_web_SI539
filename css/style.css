@@ -1,0 +1,35 @@
+h2{
+    font-size: 50px;
+}
+
+body{
+	padding: 10px;
+	background-color: #B0914F;
+	font-size: 125%;
+}
+
+img{
+    width: 45%;
+    padding: 10px;
+    margin: 5px;
+    border: outset #4F6EB0 10px;
+}
+
+img:hover{
+    color:blue
+}
+
+li{
+    display: inline-block;
+    margin: 5 px;
+}
+
+.active{
+    color: darkred;
+    border: solid darkred;
+}
+
+p{
+    display: inline-block;
+    text-align: left;
+}
