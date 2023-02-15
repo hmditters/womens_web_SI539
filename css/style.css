@@ -4,7 +4,7 @@ h2{
 
 body{
 	padding: 10px;
-	background-color: #B0914F;
+	background-color: hsl(71, 100%, 72%);
 	font-size: 125%;
 }
 
@@ -12,7 +12,7 @@ img{
     width: 45%;
     padding: 10px;
     margin: 5px;
-    border: outset #4F6EB0 10px;
+    border: outset #41fb3a 10px;
     border-radius: 30px;
 }
 
@@ -26,8 +26,8 @@ li{
 }
 
 .active{
-    color: darkred;
-    border: solid darkred;
+    color: rgb(0, 218, 251);
+    border: solid rgb(0, 251, 255);
 }
 
 p{
