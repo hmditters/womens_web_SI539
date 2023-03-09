@@ -1,5 +1,18 @@
-h2{
+
+h1{
     font-size: 50px;
+    padding: 15px 0px 3px 0px;
+    font-family: 'Nunito Sans';
+}
+
+h2{
+    font-size: 40px;
+    padding: 15px 0px 3px 0px;
+}
+
+h3{
+    font-size: 25px;
+    padding: 0px 0px 0px 0px;
 }
 
 body{
@@ -16,23 +29,111 @@ img{
     border-radius: 30px;
 }
 
-img:nth-of-type(even):hover {
-    transform: scale(1.1);
-  }
-
 li{
     display: inline-block;
-    margin: 5px;
+    margin: 2px;
+}
+
+@keyframes background-color {
+    from {background-color: #41fb3a;}
+    to {background-color: antiquewhite;}
+}
+
+.lit h3, .lit ul, .lit p{
+    background-color: antiquewhite;
+    animation-name: background-color;
+    animation-duration: 3s;
 }
 
 .active{
-    color: rgb(0, 218, 251);
-    border: solid rgb(0, 251, 255);
+    color: #8A0E00;
+    border: solid #8A0E00;
 }
 
 p{
     display: inline-block;
     text-align: left;
+    padding: 5px 5px 20px 5px;
+}
+
+.lit{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 30px;
+}
+
+.lit h2{
+    padding: 10px 0px 10px 10px;
+}
+
+.lit:nth-child(odd) img{
+    grid-column: 1 / 1;
+    grid-row: 2 / span 4;
+    border-style: ridge;
+}
+
+.lit:nth-child(even) img{
+    grid-column: 2 / 2;
+    grid-row: 2 / span 4;
+    border-style: ridge;
+}
+
+.lit:nth-child(even) p{
+    grid-column: 1 / 1;
+}
+
+.lit:nth-child(odd) p{
+    grid-column: 2 / 2;
+}
+
+.lit:nth-child(odd) h3{
+    grid-column: 1 / 2;
+    padding: 0px 10px 10px 0px;
+}
+
+.lit:nth-child(even) h3{
+    grid-column: 1 / 1;
+    padding: 0px 10px 40px 0px;
+}
+
+.lit:nth-child(odd) h3{
+    grid-column: 2 / 2;
+    padding: 0px 10px 40px 0px;
+}
+
+.lit:nth-child(even) ul{
+    grid-column: 1 / 1;
+}
+
+.lit:nth-child(odd) ul{
+    grid-column: 2 / 2;
+}
+
+.hist{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    min-height: 100px;
+    margin: 20px 50px 20px 20px;
+}
+
+.hist h2{
+    padding: 10px 30px 0px 10px;
+}
+
+.hist img{
+    margin: 10px 0px 20px 10px;
+}
+
+.hist img:hover{
+    transform: scale(.8);
+}
+
+.hist p{
+    background-color: antiquewhite;
+    animation-name: background-color;
+    animation-duration: 3s;
 }
 
 dt{
@@ -45,3 +146,10 @@ dt{
     margin: 10px;
     padding: 5px;
 }
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0s;
+      transition-duration: 0s;
+    }
+  }
