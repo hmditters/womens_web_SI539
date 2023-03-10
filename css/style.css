@@ -38,6 +38,8 @@ li{
 @keyframes background-color {
     from {background-color: #41fb3a;}
     to {background-color: antiquewhite;}
+    from {font-size: 50%;}
+    to {font-size: 100%}
 }
 
 .lit h3, .lit ul, .lit p{
