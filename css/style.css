@@ -38,8 +38,6 @@ li{
 @keyframes background-color {
     from {background-color: #41fb3a;}
     to {background-color: antiquewhite;}
-    from {font-size: 50%;}
-    to {font-size: 100%}
 }
 
 .lit h3, .lit ul, .lit p{
@@ -121,12 +119,26 @@ p{
     margin: 20px 50px 20px 20px;
 }
 
-.hist h2{
-    padding: 10px 30px 0px 10px;
-}
+@keyframes move {
+    from {
+      object-position: 600px 0;
+    }
+
+    to {
+      object-position: 100%;
+    }
+  }
+
 
 .hist img{
     margin: 10px 0px 20px 10px;
+    animation-name: move;
+    animation-duration: 3s;
+}
+
+
+.hist h2{
+    padding: 10px 30px 0px 10px;
 }
 
 .hist img:hover{
