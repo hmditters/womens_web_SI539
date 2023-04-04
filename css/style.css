@@ -4,6 +4,9 @@ h1{
     padding: 15px 0px 3px 0px;
     font-family: 'Nunito Sans';
     background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.goodfreephotos.com%2Falbums%2Ftextures%2Fcrumpled-paper-texture.jpg&f=1&nofb=1&ipt=18f72dedb4416f974fbf1643d8217a1e86cb8fbde48d6ec51c8c306a841042e2&ipo=images");
+    font-weight: bolder;
+    font-style: italic;
+    color: #8A0E00;
 }
 
 h2{
@@ -15,6 +18,10 @@ h2{
 
 .skip-link{
     display: none;
+}
+
+.skip-link:focus {
+    display: inline-block;
 }
 
 h3{
@@ -30,6 +37,16 @@ body{
 	font-size: 125%;
 }
 
+button {
+    font-size: 24px;
+    padding: 5px 5px;
+    margin: 10px;
+    background-color: antiquewhite;
+    font-family: 'Nunito Sans';
+    border-style: groove;
+    border-width: 5px;
+}
+
 img{
     width: 45%;
     padding: 10px;
@@ -37,6 +54,11 @@ img{
     border: outset #41fb3a 10px;
     border-radius: 30px;
 }
+
+img:active{
+    background-color: #8A0E00;
+}
+
 
 li{
     display: inline-block;
@@ -67,6 +89,56 @@ p{
     font-family: 'Nunito Sans';
 }
 
+.about {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-gap: 10px;
+}
+
+.about img{
+    grid-row: 2;
+    min-width: 350px;
+}
+
+@media (min-width: 768px) {
+    .about {
+      display: grid;
+      grid-template-columns: repeat(3fr);
+      grid-template-rows: auto;
+      grid-gap: 20px;
+    }
+
+    .about img{
+        grid-row: 1;
+    }
+
+    img:active{
+        background-color: #8A0E00;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      grid-gap: 10px;
+    }
+
+    .about h3{
+        grid-column: 1;
+    }
+
+    .about h3{
+        background-color: #41fb3a;
+    }
+
+    img:hover{
+        background-color: #8A0E00;
+    }
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -83,7 +155,7 @@ ul {
   }
 
   li a.active {
-    background-color: #04AA6D;
+    background-color: #000000;
     color: white;
   }
 
@@ -174,9 +246,33 @@ dd {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-between;
-    min-height: 100px;
+    min-height: 70px;
     margin: 20px 50px 20px 20px;
 }
+
+.hist img {
+    max-width: 600px;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .hist{
+        display: flex;
+        align-content: space-around;
+        justify-content: center;
+        min-height: fit-content;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hist{
+        display: flex;
+        align-items: start;
+        margin: 30px 30px 30px 30px;
+    }
+}
+
+
 
 @keyframes move {
     from {
@@ -210,22 +306,44 @@ dd {
     animation-duration: 3s;
 }
 
-dt{
+.dict {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 10px;
+  }
+
+  .dict dt {
+    grid-column: span 2;
+  }
+
+.dict dt{
     margin: 0px;
     font-size: larger;
     font-weight: bold;
     font-family: 'Nunito Sans';
-}
-
-dt{
+    grid-row: 1;
+    grid-column: span 4;
     margin: 10px;
     padding: 5px;
     font-family: 'Nunito Sans';
 }
 
-dl{
+.dict dl{
     font-family: 'Nunito Sans';
 }
+
+.dict dd{
+    font-family: 'Nunito Sans';
+    column-span: 1 / 4;
+}
+
+.dict {
+        display: grid;
+        grid-template-columns: 50% 50% 50% 50%;
+        grid-gap: 5px;
+}
+
 
 @media (prefers-reduced-motion: reduce) {
     * {
